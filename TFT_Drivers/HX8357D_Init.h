@@ -97,7 +97,11 @@
     writedata(0x55);  // 16 bit
     
     writecommand(HX8357_MADCTL);  
-    writedata(TFT_MAD_MX | TFT_MAD_MY | TFT_MAD_COLOR_ORDER); 
+// TODO
+// writedata(TFT_MAD_MX | TFT_MAD_MY | TFT_MAD_COLOR_ORDER); 
+Serial.println(TFT_MAD_MX | TFT_MAD_MY | TFT_MAD_COLOR_ORDER); 
+// Serial.println(0x88);
+     writedata(0x88);
     
     writecommand(HX8357_TEON);  // TE off
     writedata(0x00); 
